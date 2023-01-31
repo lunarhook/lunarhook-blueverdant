@@ -31,7 +31,7 @@ import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.uimanager.UIManagerModule;
 import com.lunarhook.tessar.Tessar;
-import com.sixrandom.MainApplication;
+import com.blueverdant.MainApplication;
 
 import java.io.File;
 import java.io.FilenameFilter;

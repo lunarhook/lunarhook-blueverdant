@@ -1,4 +1,4 @@
-package com.sixrandom;
+package com.blueverdant;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactInstanceManager;
@@ -20,7 +20,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "sixrandom";
+    return "blueverdant";
   }
 
   private ReactInstanceManager mReactInstanceManager;

@@ -1,4 +1,4 @@
-package com.sixrandom.wxapi;
+package com.blueverdant.wxapi;
 
 import android.app.Activity;
 import android.os.Bundle;

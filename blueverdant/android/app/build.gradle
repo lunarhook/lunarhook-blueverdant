@@ -128,13 +128,13 @@ def nativeArchitectures = project.getProperties().get("reactNativeDebugArchitect
 
 android {
 
-    namespace 'com.sixrandom'
+    namespace 'com.blueverdant'
     ndkVersion rootProject.ext.ndkVersion
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.sixrandom"
+        applicationId "com.blueverdant"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 75
