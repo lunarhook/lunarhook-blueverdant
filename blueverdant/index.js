@@ -34,7 +34,7 @@ import LunarConsultantListPage from './src/exploration/LunarcommunityLib/LunarCo
 import ConsultantDetailPage from './src/exploration/LunarcommunityLib/ConsultantDetailPage'
 import ConsultantChatPage from './src/exploration/LunarcommunityLib/ConsultantChatPage'
 */
-
+/*
 import SixrandomNewPage from './src/kit/UniversechangesLib/SixrandomLib/SixrandomNewPage';
 import SixrandomFullInfoPage from './src/kit/UniversechangesLib/SixrandomLib/SixrandomFullInfoPage'
 import SixrandomHistoryPage from './src/kit/UniversechangesLib/SixrandomLib/SixrandomHistoryPage';
@@ -42,13 +42,15 @@ import EightrandomNewPage from './src/kit/UniversechangesLib/EightrandomLib/Eigh
 import EightrandomMainPage from './src/kit/UniversechangesLib/EightrandomLib/EightrandomMainPage'
 import EightrandomHistoryPage from './src/kit/UniversechangesLib/EightrandomLib/EightrandomHistoryPage'
 import NumberMainPage from './src/kit/UniversechangesLib/NumberLib/NumberMainPage'
-import NumberMotionNewPage from './src/kit/NumberMotionsLib/NumberMotionNewPage'
+
 import MarryNewPage from './src/kit/UniversechangesLib/Marry/MarryNewPage'
 import MarryMainPage from './src/kit/UniversechangesLib/Marry/MarryMainPage'
 import MarryHistoryPage from './src/kit/UniversechangesLib/Marry/MarryHistoryPage'
 import PartnershipNewPage from './src/kit/UniversechangesLib/Partnership/PartnershipNewPage'
 import PartnershipMainPage from './src/kit/UniversechangesLib/Partnership/PartnershipMainPage'
 import PartnershipHistoryPage from './src/kit/UniversechangesLib/Partnership/PartnershipHistoryPage'
+*/
+import NumberMotionNewPage from './src/kit/NumberMotionsLib/NumberMotionNewPage'
 import kitPage from './src/kit/kitPage'
 //import kitExplorationPage from './src/kit/kitExplorationPage'
 import kitConfigPage from './src/kit/kitConfigPage';
@@ -84,7 +86,7 @@ import PROFModule from './src/kit/LunarMotionsLib/PsychLib/PROFModule'
 import MHTModule from './src/kit/LunarMotionsLib/PsychLib/MHTModule'
 import MHRSPModule from './src/kit/LunarMotionsLib/PsychLib/MHRSPModule'
 
-
+/*
 import SixCourseNewPage from './src/kit/ThreechangesLib/sixcourse/SixCourseNewPage'
 import SixCourseMainPage from './src/kit/ThreechangesLib/sixcourse/SixCourseMainPage'
 import SixCourseHistoryPage from './src/kit/ThreechangesLib/sixcourse/SixCourseHistoryPage'
@@ -94,6 +96,11 @@ import qimenHistoryPage from './src/kit/ThreechangesLib/qimen/qimenHistoryPage'
 import taiyiNewPage from './src/kit/ThreechangesLib/taiyi/taiyiNewPage'
 import taiyiMainPage from './src/kit/ThreechangesLib/taiyi/taiyiMainPage'
 import taiyiHistoryPage from './src/kit/ThreechangesLib/taiyi/taiyiHistoryPage'
+
+import ziweiHistoryPage from './src/kit/ziwei/ziweiHistoryPage'
+import ziweiMainPage from './src/kit/ziwei/ziweiMainPage'
+import ziweiNewPage from './src/kit/ziwei/ziweiNewPage'
+*/
 import ChangesuniversePage from './src/kit/ChangesuniverseLib/ChangesuniversePage'
 import GamblePage from './src/kit/ChangesuniverseLib/GambleLib/GamblePage'
 import StarInfoPage from './src/kit/ChangesuniverseLib/GambleLib/StarInfoPage'
@@ -101,11 +108,6 @@ import TarotPage from './src/kit/ChangesuniverseLib/TarotLib/TarotPage'
 import TarotVenusPage from './src/kit/ChangesuniverseLib/TarotLib/TarotVenusPage'
 import TarotStarofDavidPage from './src/kit/ChangesuniverseLib/TarotLib/TarotStarofDavidPage'
 import TarotCeltsPage from './src/kit/ChangesuniverseLib/TarotLib/TarotCeltsPage'
-import ziweiHistoryPage from './src/kit/ziwei/ziweiHistoryPage'
-import ziweiMainPage from './src/kit/ziwei/ziweiMainPage'
-import ziweiNewPage from './src/kit/ziwei/ziweiNewPage'
-
-
 
 import LunarCoursePage from './src/LunarCourse/LunarCoursePage';
 import LunarMasterPage from './src/LunarCourse/LunarMasterPage'
@@ -226,7 +228,6 @@ const Exploration = createBottomTabNavigator(
             return (<Menu style={{ paddingRight: 20, alignContent: "center", alignItems: "baseline" }}>
               <MenuTrigger>{RouteConfig['kitConfigPage'].icon}</MenuTrigger>
               <MenuOptions style={{ width: 175, flex: 1 }}>
-                <MenuOption style={{ flexDirection: "row", alignItems: "center", flex: 1 }} onSelect={() => navigation.navigate(RouteConfig['kitConfigPage'].route)}><Text style={{ includeFontPadding: false, alignContent: "center", alignItems: "center", height: 30, width: 30 }}>{RouteConfig['kitConfigPage'].icon}</Text><Text style={{ paddingLeft: 20 }}>{RouteConfig['kitConfigPage'].name}</Text></MenuOption>
                 <MenuOption style={{ flexDirection: "row", alignItems: "center", flex: 1 }} onSelect={() => navigation.navigate(RouteConfig["SearchPage"].route)}><Text style={{ includeFontPadding: false, alignContent: "center", alignItems: "center", textAlignVertical: "center", height: 30, width: 30 }}>{RouteConfig["SearchPage"].icon}</Text><Text style={{ paddingLeft: 20 }}>{RouteConfig["SearchPage"].name + "支持"}</Text></MenuOption>
                 <MenuOption style={{ flexDirection: "row", alignItems: "center", flex: 1 }} onSelect={() => kitPage.ShareInstance().onBussion("service", navigation.navigate)}><Text style={{ includeFontPadding: false, alignContent: "center", alignItems: "center", textAlignVertical: "center", height: 30, width: 30 }}>{RouteConfig["service"].icon}</Text><Text style={{ paddingLeft: 20 }}>{RouteConfig["service"].name}</Text></MenuOption>
                 <MenuOption style={{ flexDirection: "row", alignItems: "center", flex: 1 }} onSelect={() => kitPage.ShareInstance().setState({ less: !kitPage.ShareInstance().state.less })}><Text style={{ includeFontPadding: false, alignContent: "center", alignItems: "center", textAlignVertical: "center", height: 30, width: 30 }}>{IconConfig.IconFirstUserFace}</Text><Text style={{ paddingLeft: 20 }}>{"引导页面"}</Text></MenuOption>
@@ -320,6 +321,7 @@ const Exploration = createBottomTabNavigator(
 
 const MainPage = createBottomTabNavigator({
 
+  /*
   CalendarPageFake: createStackNavigator(
     { "CalendarPageFake": "乾坤" },
     {
@@ -328,6 +330,7 @@ const MainPage = createBottomTabNavigator({
       })
     }
   ),
+  */
   kitPage: { screen: kitPage },
 
   ExplorationFake: createStackNavigator(
@@ -383,7 +386,6 @@ const MainPage = createBottomTabNavigator({
             return (<Menu style={{ paddingRight: 20, alignContent: "center", alignItems: "baseline" }}>
               <MenuTrigger>{RouteConfig['kitConfigPage'].icon}</MenuTrigger>
               <MenuOptions style={{ width: 175, flex: 1 }}>
-                <MenuOption style={{ flexDirection: "row", alignItems: "center", flex: 1 }} onSelect={() => navigation.navigate(RouteConfig['kitConfigPage'].route)}><Text style={{ includeFontPadding: false, alignContent: "center", alignItems: "center", height: 30, width: 30 }}>{RouteConfig['kitConfigPage'].icon}</Text><Text style={{ paddingLeft: 20 }}>{RouteConfig['kitConfigPage'].name}</Text></MenuOption>
                 <MenuOption style={{ flexDirection: "row", alignItems: "center", flex: 1 }} onSelect={() => navigation.navigate(RouteConfig["SearchPage"].route)}><Text style={{ includeFontPadding: false, alignContent: "center", alignItems: "center", textAlignVertical: "center", height: 30, width: 30 }}>{RouteConfig["SearchPage"].icon}</Text><Text style={{ paddingLeft: 20 }}>{RouteConfig["SearchPage"].name + "支持"}</Text></MenuOption>
                 <MenuOption style={{ flexDirection: "row", alignItems: "center", flex: 1 }} onSelect={() => kitPage.ShareInstance().onBussion("service", navigation.navigate)}><Text style={{ includeFontPadding: false, alignContent: "center", alignItems: "center", textAlignVertical: "center", height: 30, width: 30 }}>{RouteConfig["service"].icon}</Text><Text style={{ paddingLeft: 20 }}>{RouteConfig["service"].name}</Text></MenuOption>
                 <MenuOption style={{ flexDirection: "row", alignItems: "center", flex: 1 }} onSelect={() => kitPage.ShareInstance().setState({ less: !kitPage.ShareInstance().state.less })}><Text style={{ includeFontPadding: false, alignContent: "center", alignItems: "center", textAlignVertical: "center", height: 30, width: 30 }}>{IconConfig.IconFirstUserFace}</Text><Text style={{ paddingLeft: 20 }}>{"引导页面"}</Text></MenuOption>
@@ -448,7 +450,10 @@ const blueverdant = createStackNavigator({
   ConsultantChatPage: ConsultantChatPage,
   */
   Exploration,
+  
   CalendarPage: { screen: CalendarPage },
+  NumberMotionNewPage: { screen: NumberMotionNewPage },
+  /*
   NumberMainPage: { screen: NumberMainPage },
   SixrandomHistoryPage: { screen: SixrandomHistoryPage },
   SixrandomNewPage: { screen: SixrandomNewPage },
@@ -456,10 +461,8 @@ const blueverdant = createStackNavigator({
   EightrandomMainPage: { screen: EightrandomMainPage },
   EightrandomNewPage: { screen: EightrandomNewPage },
   EightrandomHistoryPage: { screen: EightrandomHistoryPage },
-  NumberMotionNewPage: { screen: NumberMotionNewPage },
-  SearchPage: { screen: SearchPage },
-  NamePage: { screen: NamePage },
-  TrackStarPage: { screen: TrackStarPage },
+
+
   MarryMainPage:{screen:MarryMainPage},
   MarryNewPage:{screen:MarryNewPage},
   MarryHistoryPage:{screen:MarryHistoryPage},
@@ -479,6 +482,10 @@ const blueverdant = createStackNavigator({
   ziweiHistoryPage: { screen: ziweiHistoryPage },
   ziweiMainPage: { screen: ziweiMainPage },
   ziweiNewPage: { screen: ziweiNewPage },
+  */
+  SearchPage: { screen: SearchPage },
+  NamePage: { screen: NamePage },
+  TrackStarPage: { screen: TrackStarPage },
   ChangesuniversePage: { screen: ChangesuniversePage },
   StarInfoPage: { screen: StarInfoPage },
   GamblePage: { screen: GamblePage },

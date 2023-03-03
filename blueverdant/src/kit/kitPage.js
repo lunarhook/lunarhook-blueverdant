@@ -22,6 +22,7 @@ if (w > 320 && Platform.OS === 'ios') {
   coln = 4
 }
 var datalist = []
+/*
 datalist["周易八卦"] = [
   { icon: RouteConfig['SixrandomNewPage'].icon, text: RouteConfig['SixrandomNewPage'].name, url: RouteConfig['SixrandomNewPage'].route },
   { icon: RouteConfig['EightrandomNewPage'].icon, text: RouteConfig['EightrandomNewPage'].name, url: RouteConfig['EightrandomNewPage'].route },
@@ -45,6 +46,7 @@ datalist["星盘星座"] = [
   { icon: RouteConfig['GamblePage'].icon, text: RouteConfig['GamblePage'].name, url: RouteConfig['GamblePage'].route },
   { icon: RouteConfig['StarInfoPage'].icon, text: RouteConfig['StarInfoPage'].name, url: RouteConfig['StarInfoPage'].route },
 ]
+*/
 datalist["大道易德"] = [
   { icon: RouteConfig['malecall'].icon, text: "刘老师", url: "tel:18911832827" },
   { icon: RouteConfig['femalecall'].icon, text: "郑老师", url: "tel:13391909968" },
@@ -56,10 +58,10 @@ datalist["大道易德"] = [
   { icon: RouteConfig['qrcode'].icon, text: RouteConfig['qrcode'].name, url: "openqrcode" },
 ]
 datalist["工具助手"] = [
-  { icon: RouteConfig['NamePage'].icon, text: RouteConfig['NamePage'].name, url: RouteConfig['NamePage'].route },
+  //{ icon: RouteConfig['NamePage'].icon, text: RouteConfig['NamePage'].name, url: RouteConfig['NamePage'].route },
   { icon: RouteConfig['NumberMotionNewPage'].icon, text: RouteConfig['NumberMotionNewPage'].name, url: RouteConfig['NumberMotionNewPage'].route },
   { icon: RouteConfig['SloganShare'].icon, text: RouteConfig['SloganShare'].name, url: RouteConfig['SloganShare'].route },
-  { icon: RouteConfig['MORALSModule'].icon, text: RouteConfig['MORALSModule'].name, url: RouteConfig['MORALSModule'].route },
+  //{ icon: RouteConfig['MORALSModule'].icon, text: RouteConfig['MORALSModule'].name, url: RouteConfig['MORALSModule'].route },
 
 ]
 datalist["性格测评"] = [
@@ -540,6 +542,7 @@ class kitPage extends React.Component {
             renderItem={this.renderItemel}
             onPress={(_el: any, index: any) => { this.onBussion(_el, navigate) }}
           /></Accordion.Panel >)*/
+          /*
       contentlist["周易八卦"] = (
         <Accordion.Panel header={"周易八卦"} key={"周易八卦"}>
           <Grid
@@ -550,6 +553,7 @@ class kitPage extends React.Component {
             renderItem={this.renderItemel}
             onPress={(_el: any, index: any) => { this.onPress(_el, navigate) }}
           /></Accordion.Panel >)
+          */
     }
     contentlist["儿童少年"] = (
       <Accordion.Panel header={"儿童青少年"} key={"儿童青少年"}>
@@ -595,7 +599,7 @@ class kitPage extends React.Component {
               var content = new Array()
               if ("Huawei" == kitPageController.state.Channel) {
                 delete contentlist["大道易德"]
-                delete contentlist["周易八卦"]
+                //delete contentlist["周易八卦"]
                 delete contentlist["塔罗牌阵"]
                 delete contentlist["星盘星座"]
               }
@@ -665,6 +669,7 @@ class kitPage extends React.Component {
           </Accordion></ScrollView>
       )
     }
+    /*
     else if ("周易八卦" == tab.title && "Huawei" != kitPageController.state.Channel) {
       return (
         <ScrollView>
@@ -689,6 +694,7 @@ class kitPage extends React.Component {
           </Accordion></ScrollView>
       )
     }
+    */
     /*
     else if ("大道易德" == tab.title && "Huawei" != kitPageController.state.Channel) {
       return (
@@ -759,32 +765,20 @@ class kitPage extends React.Component {
                   </Card>
                 </TouchableOpacity >
                 <WhiteSpace size="lg" />
-                <TouchableOpacity onPress={() => { cthis.setState({ less: false }), navigate(RouteConfig['NumberMainPage'].route) }}>
+                <TouchableOpacity onPress={() => { cthis.setState({ less: false }), navigate(RouteConfig['EnneagramModule'].route) }}>
                   <Card>
                     <Card.Header
-                      extra={RouteConfig['NumberMainPage'].name}
+                      extra={RouteConfig['EnneagramModule'].name}
                       thumbStyle={{ width: 30, height: 30 }}
-                      thumb={RouteConfig['NumberMainPage'].icon}
+                      thumb={RouteConfig['EnneagramModule'].icon}
                     />
                     <Card.Body>
-                      <Text style={{ marginLeft: 16 }}>通过对数字例如电话号码的排列组合对固定数字组合的运势做判断</Text>
+                      <Text style={{ marginLeft: 16 }}>又名性格型态学、九种性格。它包括活跃程度；规律性；感兴趣的范围；反应的强度；心理的素质；分心程度；专注力范围/持久性。</Text>
                     </Card.Body>
                   </Card>
                 </TouchableOpacity>
                 <WhiteSpace size="lg" />
-                <TouchableOpacity onPress={() => { cthis.setState({ less: false }), navigate(RouteConfig['GamblePage'].route) }}>
-                  <Card>
-                    <Card.Header
-                      extra={RouteConfig['GamblePage'].name}
-                      thumbStyle={{ width: 30, height: 30 }}
-                      thumb={RouteConfig['GamblePage'].icon}
-                    />
-                    <Card.Body>
-                      <Text style={{ marginLeft: 16 }}>当你的情感不顺利的时候可以尝试用星座骰子去探索下问题</Text>
-                    </Card.Body>
-                  </Card>
-                </TouchableOpacity>
-                <WhiteSpace size="lg" />
+               
               </View>
               <Button type="primary" onPress={() => cthis.setState({ less: false })}>
                 关闭
