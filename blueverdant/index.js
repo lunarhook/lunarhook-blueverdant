@@ -359,10 +359,7 @@ const MainPage = createBottomTabNavigator({
       tabBarOnPress: (nv) => {
         const { routeName } = navigation.state;
 
-        if ("CalendarPageFake" == routeName) {
-          navigation.navigate("CalendarPage")
-        }
-        else if ("MyPageFake" == routeName) {
+        if ("MyPageFake" == routeName) {
           navigation.navigate("MyPage")
         }
         else if ("ExplorationFake" == routeName) {
