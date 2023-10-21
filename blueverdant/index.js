@@ -15,44 +15,13 @@ import {
   MenuTrigger,
 } from 'react-native-popup-menu';
 import IconConfig from './src/config/IconConfig'
+import ScreenConfig from './src/config/ScreenConfig'
 import slogan from './src/slogan'
 import CalendarPage from './src/CalendarPage';
 import SearchPage from './src/tools/SearchPage'
-
-import ExplorationPage from './src/exploration/TreeHole/ExplorationPage'
 import NightPage from './src/exploration/NightFireSide/NightPage'
-/*
-import ExplorationDetailPage from './src/exploration/TreeHole/ExplorationDetailPage'
-import ExplorationAnswerPage from './src/exploration/TreeHole/ExplorationAnswerPage'
-import ExplorationAskPage from './src/exploration/TreeHole/ExplorationAskPage'
-
-import NightDetailPage from './src/exploration/NightFireSide/NightDetailPage'
-import ChatPage from './src/exploration/Chat/ChatPage'
-import ConfidePage from './src/exploration/Chat/ConfidePage'
-import { LunaranswerPage } from './src/exploration/LunarcommunityLib/LunaranswerPage'
-import LunarConsultantListPage from './src/exploration/LunarcommunityLib/LunarConsultantListPage'
-import ConsultantDetailPage from './src/exploration/LunarcommunityLib/ConsultantDetailPage'
-import ConsultantChatPage from './src/exploration/LunarcommunityLib/ConsultantChatPage'
-*/
-/*
-import SixrandomNewPage from './src/kit/UniversechangesLib/SixrandomLib/SixrandomNewPage';
-import SixrandomFullInfoPage from './src/kit/UniversechangesLib/SixrandomLib/SixrandomFullInfoPage'
-import SixrandomHistoryPage from './src/kit/UniversechangesLib/SixrandomLib/SixrandomHistoryPage';
-import EightrandomNewPage from './src/kit/UniversechangesLib/EightrandomLib/EightrandomNewPage';
-import EightrandomMainPage from './src/kit/UniversechangesLib/EightrandomLib/EightrandomMainPage'
-import EightrandomHistoryPage from './src/kit/UniversechangesLib/EightrandomLib/EightrandomHistoryPage'
-import NumberMainPage from './src/kit/UniversechangesLib/NumberLib/NumberMainPage'
-
-import MarryNewPage from './src/kit/UniversechangesLib/Marry/MarryNewPage'
-import MarryMainPage from './src/kit/UniversechangesLib/Marry/MarryMainPage'
-import MarryHistoryPage from './src/kit/UniversechangesLib/Marry/MarryHistoryPage'
-import PartnershipNewPage from './src/kit/UniversechangesLib/Partnership/PartnershipNewPage'
-import PartnershipMainPage from './src/kit/UniversechangesLib/Partnership/PartnershipMainPage'
-import PartnershipHistoryPage from './src/kit/UniversechangesLib/Partnership/PartnershipHistoryPage'
-*/
 import NumberMotionNewPage from './src/kit/NumberMotionsLib/NumberMotionNewPage'
 import kitPage from './src/kit/kitPage'
-//import kitExplorationPage from './src/kit/kitExplorationPage'
 import kitConfigPage from './src/kit/kitConfigPage';
 import PsychTestPage from './src/kit/LunarMotionsLib/PsychTestPage'
 import MBTIModule from './src/kit/LunarMotionsLib/PsychLib/MBTIModule'
@@ -86,21 +55,6 @@ import PROFModule from './src/kit/LunarMotionsLib/PsychLib/PROFModule'
 import MHTModule from './src/kit/LunarMotionsLib/PsychLib/MHTModule'
 import MHRSPModule from './src/kit/LunarMotionsLib/PsychLib/MHRSPModule'
 
-/*
-import SixCourseNewPage from './src/kit/ThreechangesLib/sixcourse/SixCourseNewPage'
-import SixCourseMainPage from './src/kit/ThreechangesLib/sixcourse/SixCourseMainPage'
-import SixCourseHistoryPage from './src/kit/ThreechangesLib/sixcourse/SixCourseHistoryPage'
-import qimenNewPage from './src/kit/ThreechangesLib/qimen/qimenNewPage'
-import qimenMainPage from './src/kit/ThreechangesLib/qimen/qimenMainPage'
-import qimenHistoryPage from './src/kit/ThreechangesLib/qimen/qimenHistoryPage'
-import taiyiNewPage from './src/kit/ThreechangesLib/taiyi/taiyiNewPage'
-import taiyiMainPage from './src/kit/ThreechangesLib/taiyi/taiyiMainPage'
-import taiyiHistoryPage from './src/kit/ThreechangesLib/taiyi/taiyiHistoryPage'
-
-import ziweiHistoryPage from './src/kit/ziwei/ziweiHistoryPage'
-import ziweiMainPage from './src/kit/ziwei/ziweiMainPage'
-import ziweiNewPage from './src/kit/ziwei/ziweiNewPage'
-*/
 import ChangesuniversePage from './src/kit/ChangesuniverseLib/ChangesuniversePage'
 import GamblePage from './src/kit/ChangesuniverseLib/GambleLib/GamblePage'
 import StarInfoPage from './src/kit/ChangesuniverseLib/GambleLib/StarInfoPage'
@@ -333,11 +287,11 @@ const MainPage = createBottomTabNavigator({
   */
   kitPage: { screen: kitPage },
 
-  ExplorationFake: createStackNavigator(
-    { "ExplorationFake": "知否" },
+  LunarCoursePageFake: createStackNavigator(
+    { "LunarCoursePageFake": "知否" },
     {
       navigationOptions: ({ navigation }) => ({
-        title: RouteConfig["ExplorationFake"].name,
+        title: RouteConfig["LunarCoursePage"].name,
       })
     }),
   MyPageFake: createStackNavigator(
@@ -362,8 +316,8 @@ const MainPage = createBottomTabNavigator({
         if ("MyPageFake" == routeName) {
           navigation.navigate("MyPage")
         }
-        else if ("ExplorationFake" == routeName) {
-          navigation.navigate("Exploration")
+        else if ("LunarCoursePageFake" == routeName) {
+          navigation.navigate("LunarCoursePage")
         }
         else {
           console.log("tabBarOnPress", routeName)
@@ -417,6 +371,14 @@ const MainPage = createBottomTabNavigator({
         return (<></>)
       }
     }),
+    tabBarOptions:{
+      style:{
+        height:ScreenConfig.getTabBarHeight(),
+      },
+      labelStyle:{
+        height:ScreenConfig.getTabBarHeight()-45,
+      }
+    }
   }
 
 )
