@@ -58,10 +58,7 @@ import MHRSPModule from './src/kit/LunarMotionsLib/PsychLib/MHRSPModule'
 import ChangesuniversePage from './src/kit/ChangesuniverseLib/ChangesuniversePage'
 import GamblePage from './src/kit/ChangesuniverseLib/GambleLib/GamblePage'
 import StarInfoPage from './src/kit/ChangesuniverseLib/GambleLib/StarInfoPage'
-import TarotPage from './src/kit/ChangesuniverseLib/TarotLib/TarotPage'
-import TarotVenusPage from './src/kit/ChangesuniverseLib/TarotLib/TarotVenusPage'
-import TarotStarofDavidPage from './src/kit/ChangesuniverseLib/TarotLib/TarotStarofDavidPage'
-import TarotCeltsPage from './src/kit/ChangesuniverseLib/TarotLib/TarotCeltsPage'
+
 
 import LunarCoursePage from './src/LunarCourse/LunarCoursePage';
 import LunarMasterPage from './src/LunarCourse/LunarMasterPage'
@@ -448,10 +445,6 @@ const blueverdant = createStackNavigator({
   ChangesuniversePage: { screen: ChangesuniversePage },
   StarInfoPage: { screen: StarInfoPage },
   GamblePage: { screen: GamblePage },
-  TarotPage: { screen: TarotPage },
-  TarotVenusPage: { screen: TarotVenusPage },
-  TarotStarofDavidPage: { screen: TarotStarofDavidPage },
-  TarotCeltsPage: { screen: TarotCeltsPage },
   PsychTestPage: { screen: PsychTestPage },
   EnneagramModule: { screen: EnneagramModule },
   MBTIModule: { screen: MBTIModule },
